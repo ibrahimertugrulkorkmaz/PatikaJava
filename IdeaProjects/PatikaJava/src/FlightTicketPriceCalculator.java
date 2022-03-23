@@ -9,6 +9,7 @@ public class FlightTicketPriceCalculator {
         distance = input.nextInt();
         if(distance<=0){
             System.out.println("Km değeri sıfırdan küçük olamaz");
+            System.exit(0);
         }
         System.out.print("Tek Yon mu yoksa Gidis-Donus mu?\n Tek Yon için: 1 \n Gidis-Donus için 2'ye basınız: ");
         int tripCheck = input.nextInt();
