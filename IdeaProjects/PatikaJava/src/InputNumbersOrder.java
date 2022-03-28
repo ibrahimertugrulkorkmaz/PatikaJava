@@ -1,31 +1,36 @@
 import java.util.Scanner;
 
-public class InputNumbersOrder {
-    public static void main(String[] args) {
-        int say=1, buyukSayi =0, kucukSayi =0, temp;
-        Scanner input = new Scanner(System.in);
-        System.out.print("Gireceginiz sayi adedi nedir : ");
-        int i = input.nextInt();
-        if (i >=2) {
+public class Deneme {
 
-            for (; i > 0; i--) {
-                System.out.print(say + "Sayı giriniz : ");
-                temp = input.nextInt();
-                if (say==1)
-                {
-                    buyukSayi = temp;
-                    kucukSayi = temp;
-                }
-                if (temp < kucukSayi) kucukSayi = temp;
-                else if(temp > buyukSayi) buyukSayi = temp;
-                say++;
+    public static void main(String[] args) {
+
+        int enBuyukSayi,enKucukSayi,temp,sayiAdet,ilkSayi,sayac=2;
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Kaç adet sayi gireceksiniz? ");
+        sayiAdet = input.nextInt();
+        if(sayiAdet<=1){
+            System.out.println("Karşılaştırma yapabilmek için 1'den fazla sayı girmeniz gerekmektedir.");
+            System.exit(0);
+        }
+        System.out.println("1. sayiyi giriniz: ");
+        ilkSayi=input.nextInt();
+        enBuyukSayi=ilkSayi;
+        enKucukSayi=ilkSayi;
+
+        for(int i=1;i<(sayiAdet);i++){
+            System.out.println(sayac+ ". sayiyi giriniz: ");
+            temp = input.nextInt();
+            sayac++;
+            if(temp>enBuyukSayi){
+                enBuyukSayi=temp;
             }
-            System.out.println("En büyük sayı : "+ buyukSayi);
-            System.out.print("En küçük sayı : "+ kucukSayi);
+            else if(temp<enKucukSayi){
+                enKucukSayi=temp;
+            }
         }
-        else {
-            System.out.println("İkiden daha az sayi girdiniz.");
-        }
+        System.out.println("En buyuk sayi:  "+enBuyukSayi+" En kucuk sayi: "+enKucukSayi);
     }
 }
+
 
