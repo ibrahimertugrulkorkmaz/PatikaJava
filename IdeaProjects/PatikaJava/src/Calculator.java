@@ -35,12 +35,11 @@ public class Calculator {
                 System.out.println("Cevap " + sonuc);
                 break;
             case 4:
-                if(sayi2 == 0){
+                if (sayi2 == 0) {
                     System.out.println("Bolen degerini sıfır olarak giremezsiniz");
-                }
-                else{
+                } else {
                     sonuc = sayi1 / sayi2;
-                    System.out.println("Cevap "+sonuc);
+                    System.out.println("Cevap " + sonuc);
                 }
 
                 break;
