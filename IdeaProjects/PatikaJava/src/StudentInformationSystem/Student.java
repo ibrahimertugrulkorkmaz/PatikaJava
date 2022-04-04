@@ -1,4 +1,4 @@
-package studentInformationSystem;
+package StudentInformationSystem;
 
 public class Student {
     String name,stuNo;

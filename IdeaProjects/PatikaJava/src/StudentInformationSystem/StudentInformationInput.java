@@ -1,4 +1,4 @@
-package studentInformationSystem;
+package StudentInformationSystem;
 
 public class StudentInformationInput {
     public static void main(String[] args) {
