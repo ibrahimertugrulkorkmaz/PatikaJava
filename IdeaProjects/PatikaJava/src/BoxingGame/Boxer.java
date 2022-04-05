@@ -23,7 +23,7 @@ public class Boxer {
     }
 
     void damageCalculation(){
-        this.damage=((this.hitChance*0.10)+(this.strength*0.05));
+        this.damage=((this.hitChance*0.10)+(this.strength*0.10));
         System.out.println(this.name+"Karakterinin damagei\t"+this.damage);
 
     }
