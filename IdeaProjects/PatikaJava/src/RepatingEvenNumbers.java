@@ -1,6 +1,4 @@
-import java.util.Arrays;
-
-public class RepatingNumbers {
+public class RepatingEvenNumbers {
     static boolean isFind(int[] array, int value){
         for(int i : array){
             if(i==value)
