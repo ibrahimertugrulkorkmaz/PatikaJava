@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class ArmstrongNumberChecker {
     public static void main(String[] args) {
 
@@ -23,6 +22,8 @@ public class ArmstrongNumberChecker {
             result+=basUs;
             tempSayi/=10;
         }
+//checker
+        
         if(sayi==result)
             System.out.println(result+ " sayisi Armstrong sayidir.");
         else
