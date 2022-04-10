@@ -1,24 +1,36 @@
-import java.sql.SQLOutput;
 import java.util.Arrays;
 
+
 public class RepeatingNumbersCountFinder {
+    static boolean isSame(int[] arr, int value) {
+        for (int i : arr) {
+            if (i == value) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
-        int count=0;
-        int[] dizi={10, 20, 20, 10, 10, 20, 5, 20};
-        Arrays.sort(dizi);
-        System.out.println(Arrays.toString(dizi));
-        int index= Arrays.binarySearch(dizi,20);
-        System.out.println(index);
-        for(int i=0;i<dizi.length;i++){
-            for(int j=0;j<dizi.length;j++){
-                if((i!=j) && dizi[i]==dizi[j]){
+        int[] list = {10, 20, 20, 10, 10, 20, 5, 20};
+        System.out.println("Dizi : " + Arrays.toString(list));
+        int[] duplicate = new int[list.length];
+
+        int count = 0;
+        int startIndex = 0;
+
+        System.out.println("Tekrar edilen sayılar: ");
+
+        for (int i = 0; i < list.length; i++) {
+            for (int j = 0; j < list.length; j++) {
+                if (list[i] == list[j]) {
                     count++;
                 }
-                if(count!=0){
-                    System.out.println(dizi[i]+"sayisi "+count+"kere tekrar etmiştir.");
-                    count=0;
-                }
-
+            }
+            if (!isSame(duplicate, list[i])) {
+                duplicate[startIndex++] = list[i];
+                System.out.println(list[i] + " sayısı " + count + " kere tekrar edildi");
+                count = 0;
             }
         }
 
