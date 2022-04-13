@@ -28,6 +28,9 @@ public class MineSweeper {
 
         }
 
+public boolean isMine(int[][] array, int mine){
+}
+
 
 
     }
