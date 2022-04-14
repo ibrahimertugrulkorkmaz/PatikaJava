@@ -10,7 +10,7 @@ public class MineSweeper {
     MineSweeper(int col,int row){
         this.col=col;
         this.row=row;
-        this.result=0;2022-04-12 11:18:20.824
+        this.result=0;
     }
 
     public  int elements(int this.row,int this.col){
