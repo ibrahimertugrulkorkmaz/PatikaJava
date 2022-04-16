@@ -1,6 +1,6 @@
 package BoxingGame;
 
-
+//Fight sequence
 public class Fight {
 
     Boxer b1;
@@ -20,7 +20,7 @@ public class Fight {
     }
     void start(Boxer b1, Boxer b2){
         if(isCheck()){
-            System.out.println("Dövüşçülerin kiloları belirtilen aralıkta, başarılı.");
+            System.out.println("Your fighters on same level, fight can start.");
             if(isStart()) {
                 while (true) {
                     System.out.println("=======================");
@@ -55,7 +55,7 @@ public class Fight {
 
         }
         else
-            System.out.println("Kilolar siklet aralığında değil.");
+            System.out.println("Your fighter weights are not on same level!");
     }
 
     public boolean isCheck(){
